@@ -98,7 +98,7 @@ sckuXINIU3DFWzZGr0QrqkuE/jyr7FXeUJj9B7cLo+s/TXo+RaVfi3kOc9BoxIvy
     """.strip()
     apt.trust_gpg_key(key)
     apt.add_source('nodesource', 'https://deb.nodesource.com/node_10.x', 'main')
-    apt.install_packages(['nodejs'])
+    apt.install_packages(['nodejs', 'npm'])
 
 def remove_chp():
     """
@@ -253,7 +253,7 @@ def ensure_user_environment(user_requirements_txt_file):
         'jupyterhub==1.0.0',
         'notebook==6.0.0',
         # Install additional notebook frontends!
-        'jupyterlab==1.2.1',
+        'jupyterlab==1.2.3',
         'nteract-on-jupyter==2.1.3',
         # nbgitpuller for easily pulling in Git repositories
         'nbgitpuller==0.7.2',

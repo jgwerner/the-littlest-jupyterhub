@@ -1,5 +1,6 @@
+codecov
 pytest
 pytest-cov
 pytest-mock
-codecov
 pytoml
+wheel
