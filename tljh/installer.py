@@ -98,7 +98,7 @@ sckuXINIU3DFWzZGr0QrqkuE/jyr7FXeUJj9B7cLo+s/TXo+RaVfi3kOc9BoxIvy
     """.strip()
     apt.trust_gpg_key(key)
     apt.add_source('nodesource', 'https://deb.nodesource.com/node_10.x', 'main')
-    apt.install_packages(['nodejs', 'npm'])
+    apt.install_packages(['nodejs'])
 
 def remove_chp():
     """
@@ -242,7 +242,6 @@ def ensure_user_environment(user_requirements_txt_file):
         logger.info('Downloading & setting up user environment...')
         with conda.download_miniconda_installer(miniconda_version, miniconda_installer_md5) as installer_path:
             conda.install_miniconda(installer_path, USER_ENV_PREFIX)
-
     conda.ensure_conda_packages(USER_ENV_PREFIX, [
         # Conda's latest version is on conda much more so than on PyPI.
         'conda==4.7.12'
