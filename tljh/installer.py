@@ -245,7 +245,7 @@ def ensure_user_environment(user_requirements_txt_file):
 
     conda.ensure_conda_packages(USER_ENV_PREFIX, [
         # Conda's latest version is on conda much more so than on PyPI.
-        'conda==4.5.8'
+        'conda==4.7.12'
     ])
 
     conda.ensure_pip_packages(USER_ENV_PREFIX, [
@@ -253,7 +253,7 @@ def ensure_user_environment(user_requirements_txt_file):
         'jupyterhub==1.0.0',
         'notebook==6.0.0',
         # Install additional notebook frontends!
-        'jupyterlab==1.2.1',
+        'jupyterlab==1.2.0',
         'nteract-on-jupyter==2.1.3',
         # nbgitpuller for easily pulling in Git repositories
         'nbgitpuller==0.7.2',

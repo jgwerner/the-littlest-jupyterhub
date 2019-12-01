@@ -13,7 +13,7 @@ def test_serverextensions():
     ], stderr=subprocess.PIPE)
 
     extensions = [
-        'jupyterlab 1.2.1',
+        'jupyterlab 1.2.0',
         'nbgitpuller 0.7.2',
         'nteract_on_jupyter 2.1.3',
         'nbresuse '
@@ -42,7 +42,7 @@ def test_nbextensions():
         assert '{} \x1b[32m enabled \x1b[0m'.format(e) in proc.stdout.decode()
 
     # Ensure we have 'OK' messages in our stdout, to make sure everything is importable
-    assert proc.stderr.decode() == '    - Validating: \x1b[32mOK\x1b[0m\n' * len(extensions)
+    assert proc.stderr.decode() == '      - Validating: \x1b[32mOK\x1b[0m\n' * len(extensions)
 
 
 def test_labextensions():
